@@ -3,6 +3,11 @@ import streamlit as st
 if "password_correct" not in st.session_state:  
   st.markdown("### Please log in")
   st.stop()
+   
+if st.session_state["password_correct"] != True:  
+  st.markdown("### Please log in")
+  st.stop()
+  
 
 from models import openai_chat, groq_chat
 
